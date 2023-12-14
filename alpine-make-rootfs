@@ -482,6 +482,8 @@ fi
 for dir in $UNNECESSARY_DIRS; do
 	rmdir -p "$rootfs$dir" 2>/dev/null || true
 done
+rm -Rf "$rootfs"/bin/*
+rm -Rf "$rootfs"/sbin/*
 
 #-----------------------------------------------------------------------
 if [ "$tar_opts" ]; then
