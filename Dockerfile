@@ -1,4 +1,5 @@
 FROM scratch
 ADD rootfs.tar.gz /
-CMD ["python3","--version"]
+COPY main.py /
+CMD ["python3","/main.py"]
 
